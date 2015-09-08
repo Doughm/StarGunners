@@ -1,0 +1,11 @@
+fileFormatVersion: 2
+guid: 9d66734db3cfae2458ee2d93c4e71aed
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - dagger: {fileID: 400000, guid: 2750ea9b3e4801c48a6316dcdc37ff3d, type: 2}
+  - skyrocket: {fileID: 400000, guid: e7789c892b738a54396ce98e73b3d679, type: 2}
+  - vulture: {fileID: 400000, guid: 9a5cd1bdaff05d04bb83ee3c1f70fb6d, type: 2}
+  executionOrder: 20
+  icon: {instanceID: 0}
+  userData: 
