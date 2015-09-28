@@ -73,33 +73,20 @@ public class Menu : MonoBehaviour
         GameObject.Find("MainMenu").GetComponent<CanvasGroup>().alpha = 1;
         GameObject.Find("MainMenu").GetComponent<CanvasGroup>().interactable = true;
         GameObject.Find("MainMenu").GetComponent<CanvasGroup>().blocksRaycasts = true;
-        GameObject.Find("NetworkMenu").GetComponent<CanvasGroup>().alpha = 0;
-        GameObject.Find("NetworkMenu").GetComponent<CanvasGroup>().interactable = false;
-        GameObject.Find("NetworkMenu").GetComponent<CanvasGroup>().blocksRaycasts = false;
         GameObject.Find("Skirmish").GetComponent<CanvasGroup>().alpha = 0;
         GameObject.Find("Skirmish").GetComponent<CanvasGroup>().interactable = false;
         GameObject.Find("Skirmish").GetComponent<CanvasGroup>().blocksRaycasts = false;
-        //GameObject.Find("Lobby").GetComponent<CanvasGroup>().alpha = 0;
-        //GameObject.Find("Lobby").GetComponent<CanvasGroup>().interactable = false;
-        //GameObject.Find("Lobby").GetComponent<CanvasGroup>().blocksRaycasts = false;
         GameObject.Find("GameMenu").GetComponent<CanvasGroup>().alpha = 0;
         GameObject.Find("GameMenu").GetComponent<CanvasGroup>().interactable = false;
         GameObject.Find("GameMenu").GetComponent<CanvasGroup>().blocksRaycasts = false;
-        GameObject.Find("NetworkGameSetup").GetComponent<CanvasGroup>().alpha = 0;
-        GameObject.Find("NetworkGameSetup").GetComponent<CanvasGroup>().interactable = false;
-        GameObject.Find("NetworkGameSetup").GetComponent<CanvasGroup>().blocksRaycasts = false;
         GameObject.Find("LeftTop").GetComponent<CanvasGroup>().alpha = 0;
         GameObject.Find("RightTop").GetComponent<CanvasGroup>().alpha = 0;
         GameObject.Find("RespawnCounter").GetComponent<RespawnCounter>().stopCounter();
-        //NetworkLoop.instance.isNetworkGame = false;
     }
 
     //goes to game mode
     private void gameStart()
     {
-        //GameObject.Find("Lobby").GetComponent<CanvasGroup>().alpha = 0;
-        //GameObject.Find("Lobby").GetComponent<CanvasGroup>().interactable = false;
-        //GameObject.Find("Lobby").GetComponent<CanvasGroup>().blocksRaycasts = false;
         GameObject.Find("Skirmish").GetComponent<CanvasGroup>().alpha = 0;
         GameObject.Find("Skirmish").GetComponent<CanvasGroup>().interactable = false;
         GameObject.Find("Skirmish").GetComponent<CanvasGroup>().blocksRaycasts = false;
