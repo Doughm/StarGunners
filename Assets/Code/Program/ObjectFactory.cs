@@ -360,6 +360,7 @@ public class ObjectFactory : MonoBehaviour
         GameObject.Find("LeftTop").GetComponent<CanvasGroup>().alpha = 0;
         GameObject.Find("RightTop").GetComponent<CanvasGroup>().alpha = 0;
         GameObject.Find("RespawnCounter").GetComponent<RespawnCounter>().stopCounter();
+
         GameObject.Find("ShipSelect").GetComponent<CanvasGroup>().alpha = 0;
         GameObject.Find("ShipSelect").GetComponent<CanvasGroup>().interactable = false;
         GameObject.Find("ShipSelect").GetComponent<CanvasGroup>().blocksRaycasts = false;
@@ -368,15 +369,6 @@ public class ObjectFactory : MonoBehaviour
     //unloads a level
     public void unload()
     {
-        GameObject.Find("Scoreboard").GetComponent<CanvasGroup>().alpha = 1;
-        GameObject.Find("GUI").GetComponent<ScoreBoard>().updateRectangleSize();
-        GameObject.Find("LeftTop").GetComponent<CanvasGroup>().alpha = 0;
-        GameObject.Find("RightTop").GetComponent<CanvasGroup>().alpha = 0;
-        GameObject.Find("RespawnCounter").GetComponent<RespawnCounter>().stopCounter();
-        GameObject.Find("ShipSelect").GetComponent<CanvasGroup>().alpha = 0;
-        GameObject.Find("ShipSelect").GetComponent<CanvasGroup>().interactable = false;
-        GameObject.Find("ShipSelect").GetComponent<CanvasGroup>().blocksRaycasts = false;
-
         Game.instance.isGameOver = false;
         Game.instance.isInMenu = true;
 
@@ -412,7 +404,6 @@ public class Player
     public GameObject arrow = new GameObject();
     public string ipAddress;
     public RandomGen randGen = new RandomGen();
-    private int randCounter = 0;
 
     public Player(string name)
     {
@@ -425,7 +416,6 @@ public class Player
         playerName = name;
         ipAddress = string.Empty;
         randGen = new RandomGen(seed);
-        randCounter = randCount;
     }
     /*
     //returns a random number from the given seed
